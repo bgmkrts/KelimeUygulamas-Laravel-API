@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
-
 class RegisterController extends Controller
 {
     public function index(){
@@ -50,6 +49,7 @@ class RegisterController extends Controller
         return Response::json([
             "result"=>"ok",
             "message"=>"başarılı kayıt",
+            "user"=> $users,
             "token" => $users->createToken("token")->accessToken
         ]);
 
