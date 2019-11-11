@@ -19,6 +19,7 @@ class CreateMyWordsTable extends Migration
             $table->integer('users_id');
             $table->string('myWord_tr');
             $table->string('myWord_eng');
+            $table->string('remember_word');
             $table->timestamps();
         });
     }
