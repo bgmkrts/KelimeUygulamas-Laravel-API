@@ -15,6 +15,5 @@ class WordModel extends Model
         'degreeOfDifficulty'
     ];
 
-
 }
 

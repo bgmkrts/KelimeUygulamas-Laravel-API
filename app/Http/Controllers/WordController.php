@@ -8,17 +8,15 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
 
-
 class WordController extends Controller
 {
-    public function index()
+    public function index($degreeOfDifficulty)
     {
-        $words = WordModel::inRandomOrder()->get()->groupBy("degreeOfDifficulty");
+        $words = WordModel::inRandomOrder()->where('degreeOfDifficulty',$degreeOfDifficulty)->take(3)->get();
         return Response::json([
             'data' => $words
         ]);
     }
-
     public function create(Request $request)
     {
 
