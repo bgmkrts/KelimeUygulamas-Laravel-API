@@ -19,5 +19,9 @@ class UserModel extends Model
         'email'
     ];
 
+    public function MyWords(){
+        return $this->hasMany(MyWordModel::class,'users_id','id');
+    }
+
 
 }
