@@ -9,9 +9,12 @@ class WordModel extends Model
     protected $table='words';
     public $timestamps=true;
     protected $fillable=[
+
         'word_tr',
         'word_eng',
         'degreeOfDifficulty'
     ];
+
+
 }
 
