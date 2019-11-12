@@ -25,8 +25,8 @@ class MyWordController extends Controller
         $validator = Validator::make($request->all(), [
             'words_id' => '',
             'users_id' => 'required',
-            'myWord_tr' => 'required',
-            'myWord_eng' => 'required',
+            'myWord_tr' => '',
+            'myWord_eng' => '',
             'remember_word' => ''
         ]);
         if ($validator->fails()) {
