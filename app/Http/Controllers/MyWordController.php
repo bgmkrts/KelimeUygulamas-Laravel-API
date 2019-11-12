@@ -43,9 +43,10 @@ class MyWordController extends Controller
                 'errors' => $errors,
             ]);
         }
+        $user = auth('api')->user();
         $my_words = new MyWordModel();
         $my_words->words_id = $request->words_id;
-        $my_words->users_id = $request->users_id;
+        $my_words->users_id = $user->id;
         $my_words->myWord_tr = $request->myWord_tr;
         $my_words->myWord_eng = $request->myWord_eng;
         $my_words->remember_word = $request->remember_word;
@@ -62,8 +63,9 @@ class MyWordController extends Controller
            'myWord_eng' => 'required',
            'remember_word' => ''
        ]);
+       $user = auth('api')->user();
        $my_words = MyWordModel::find($request->id);
-       $my_words ->id=$request->id;
+       $my_words ->id=$user->id;
        $my_words->myWord_tr=$request->myWord_tr;
        $my_words->myWord_eng=$request->myWord_eng;
        $my_words->remember_word=$request->remember_word;
