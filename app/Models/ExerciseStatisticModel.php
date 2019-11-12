@@ -25,4 +25,5 @@ class ExerciseStatisticModel extends Model
         $user = auth('api')->user();
         return ExerciseStatisticModel::where("users_id",$user->id)->get()->avg("point");
     }
+
 }

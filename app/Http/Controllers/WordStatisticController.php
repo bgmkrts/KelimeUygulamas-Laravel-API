@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\WordStatisticModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
@@ -15,7 +14,6 @@ class WordStatisticController extends Controller
         return Response::json([
             'data'=>$words_statistics
         ]);
-
     }
     public function create(Request $request){
         $validator = Validator::make($request->all(), [
