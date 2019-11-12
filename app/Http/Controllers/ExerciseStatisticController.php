@@ -19,7 +19,7 @@ class ExerciseStatisticController extends Controller
         $validator = Validator::make($request->all(), [
             'users_id'=>'',
             'exercise_types_id'=>'required',
-            'point'=>''
+            'point'=>'' 
             ]);
         $exercises_statistics=new ExerciseStatisticModel();
         $exercises_statistics->exercise_types_id=$request->exercise_types_id;
