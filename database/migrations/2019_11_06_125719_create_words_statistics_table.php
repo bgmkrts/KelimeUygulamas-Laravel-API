@@ -16,8 +16,7 @@ class CreateWordsStatisticsTable extends Migration
         Schema::create('words_statistics', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('users_id');
-            $table->integer('repeat');
-            $table->integer('trueAnswer');
+            $table->boolean('isTrue');
             $table->integer('words_id');
             $table->integer('my_words_id');
             $table->timestamps();

@@ -12,14 +12,13 @@ class WordController extends Controller
 {
     public function index($degreeOfDifficulty)
     {
-        $words = WordModel::inRandomOrder()->where('degreeOfDifficulty',$degreeOfDifficulty)->take(3)->get();
+        $words = WordModel::inRandomOrder()->where('degreeOfDifficulty',$degreeOfDifficulty)->take(4)->get();
         return Response::json([
             'data' => $words
         ]);
     }
     public function create(Request $request)
     {
-
         $validator = Validator::make($request->all(), [
             'word_tr' => 'required',
             'word_eng' => 'required',
@@ -47,7 +46,6 @@ class WordController extends Controller
         return Response::json([
             "message"=>"Word created"
         ]);
-
     }
     public function updateWord(Request $request){
 
@@ -66,7 +64,6 @@ class WordController extends Controller
                 'result'=>'Word updated'
             ]);
         }
-
 
     public function removeWord($id)
     {

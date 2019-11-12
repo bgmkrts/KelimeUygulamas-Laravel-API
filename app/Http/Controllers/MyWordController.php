@@ -27,7 +27,7 @@ class MyWordController extends Controller
             'users_id' => 'required',
             'myWord_tr' => 'required',
             'myWord_eng' => 'required',
-            'remember_word' => 'required'
+            'remember_word' => ''
         ]);
         if ($validator->fails()) {
             $errors = array();
@@ -60,7 +60,7 @@ class MyWordController extends Controller
            'users_id' => 'required',
            'myWord_tr' => 'required',
            'myWord_eng' => 'required',
-           'remember_word' => 'required'
+           'remember_word' => ''
        ]);
        $my_words = MyWordModel::find($request->id);
        $my_words ->id=$request->id;
