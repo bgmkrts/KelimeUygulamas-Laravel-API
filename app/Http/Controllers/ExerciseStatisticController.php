@@ -5,13 +5,13 @@ use App\Models\ExerciseStatisticModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
-
 class ExerciseStatisticController extends Controller
 {
     public function index(){
-        $exercises_statistics_avg=ExerciseStatisticModel::with('Users')->get()->avg("point");
+        $user = auth('api')->user();
+        $exercises_statistics_avg=ExerciseStatisticModel::where("users_id",$user->id)->with('Users')->get();
         return Response::json([
-            'data'=>$exercises_statistics_avg,
+            'avg'=>$exercises_statistics_avg,
         ]);
     }
     public function create(Request $request){
@@ -28,8 +28,6 @@ class ExerciseStatisticController extends Controller
         return Response::json([
             'result'=>'statistics created'
         ]);
-
-
 
     }
 }

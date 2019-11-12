@@ -44,9 +44,7 @@ Route::prefix('exerciseType')->group(function(){
 });
 Route::prefix('exerciseStatistic')->group(function() {
     Route::post("create","ExerciseStatisticController@create");
-    Route::get('/','ExerciseStatisticController@index');
-
-
+    Route::get('/','ExerciseStatisticController@index')->middleware('auth:api');
 });
 
 
