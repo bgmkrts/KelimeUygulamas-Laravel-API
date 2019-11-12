@@ -19,11 +19,12 @@ class ExerciseStatisticController extends Controller
         $validator = Validator::make($request->all(), [
             'users_id'=>'',
             'exercise_types_id'=>'required',
-            'point'=>'' 
+            'point'=>''
             ]);
+        $user = auth('api')->user();
         $exercises_statistics=new ExerciseStatisticModel();
         $exercises_statistics->exercise_types_id=$request->exercise_types_id;
-        $exercises_statistics->users_id=$request->users_id;
+        $exercises_statistics->users_id=$user->id;
         $exercises_statistics->point=$request->point;
         $exercises_statistics->save();
         return Response::json([
