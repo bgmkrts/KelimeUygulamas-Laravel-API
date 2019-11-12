@@ -30,7 +30,6 @@ Route::prefix('word')->group(function () {
     Route::post("create", "WordController@create");
     Route::get("removeWord/{id}","WordController@removeWord");
     Route::post("updateWord","WordController@updateWord");
-
 });
 Route::prefix('myWord')->group(function(){
     Route::post("create","MyWordController@create");
@@ -46,5 +45,8 @@ Route::prefix('exerciseStatistic')->group(function() {
     Route::post("create","ExerciseStatisticController@create");
     Route::get('/','ExerciseStatisticController@index')->middleware('auth:api');
 });
-
+Route::prefix('wordStatistic')->group(function(){
+    Route::post("create","WordStatisticController@create");
+    Route::get('/','WordStatisticController@index')->middleware('auth:api');
+});
 

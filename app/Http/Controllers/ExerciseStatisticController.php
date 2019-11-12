@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\ExerciseStatisticModel;
 use Illuminate\Http\Request;
@@ -10,8 +9,10 @@ class ExerciseStatisticController extends Controller
     public function index(){
         $user = auth('api')->user();
         $exercises_statistics_avg=ExerciseStatisticModel::where("users_id",$user->id)->with('Users')->get();
+        $avg =ExerciseStatisticModel::where("users_id",$user->id)->get()->avg("point");
         return Response::json([
-            'avg'=>$exercises_statistics_avg,
+            'avg'=>$avg,
+            'data'=>$exercises_statistics_avg,
         ]);
     }
     public function create(Request $request){
@@ -28,6 +29,5 @@ class ExerciseStatisticController extends Controller
         return Response::json([
             'result'=>'statistics created'
         ]);
-
     }
 }
