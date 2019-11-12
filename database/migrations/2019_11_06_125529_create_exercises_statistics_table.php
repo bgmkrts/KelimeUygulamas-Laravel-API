@@ -16,7 +16,7 @@ class CreateExercisesStatisticsTable extends Migration
         Schema::create('exercises_statistics', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('users_id');
-            $table->integer('exercises_id');
+            $table->integer('exercise_types_id');
             $table->integer('point');
             $table->timestamps();
         });
