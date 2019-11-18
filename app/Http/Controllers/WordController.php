@@ -44,8 +44,10 @@ class WordController extends Controller
         $words->degreeOfDifficulty = $request->degreeOfDifficulty;
         $words->save();
         return Response::json([
-            "message"=>"Word created"
+            "message"=>"Word created",
+
         ]);
+
     }
     public function updateWord(Request $request){
 
