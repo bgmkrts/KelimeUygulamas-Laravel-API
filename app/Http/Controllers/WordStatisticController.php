@@ -17,7 +17,7 @@ class WordStatisticController extends Controller
     }
     public function create(Request $request){
         $validator = Validator::make($request->all(), [
-            'users_id'=>'required',
+            'users_id'=>'',
             'isTrue'=>'required',
             'words_id'=>'required',
             'my_words_id'=>''
