@@ -24,7 +24,7 @@ class MyWordController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'words_id' => '',
-            'users_id' => '',
+            'users_id' => 'required',
             'myWord_tr' => '',
             'myWord_eng' => '',
             'remember_word' => ''
@@ -58,7 +58,7 @@ class MyWordController extends Controller
    public function updateMyWord(Request $request){
        $validator = Validator::make($request->all(), [
            'words_id' => '',
-           'users_id' => '',
+           'users_id' => 'required',
            'myWord_tr' => 'required',
            'myWord_eng' => 'required',
            'remember_word' => ''

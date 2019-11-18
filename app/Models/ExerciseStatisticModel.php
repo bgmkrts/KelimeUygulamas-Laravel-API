@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Models;
+
 use Illuminate\Database\Eloquent\Model;
+
 class ExerciseStatisticModel extends Model
 {
     protected $table = 'exercises_statistics';

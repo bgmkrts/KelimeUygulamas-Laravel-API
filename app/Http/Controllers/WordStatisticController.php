@@ -26,8 +26,7 @@ class WordStatisticController extends Controller
         $words_statistics=new WordStatisticModel();
         $words_statistics->users_id=$user->id;
         $words_statistics->isTrue=$request->isTrue;
-        if($request->words_id)
-        {
+        if($request->words_id){
             $words_statistics->words_id=$request->words_id;
         }
         else{ $words_statistics->my_words_id=$request->my_words_id;

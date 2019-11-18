@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae12ecce-4d33-40e9-a345-046b039852c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wordGame2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wordGame2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MyWordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyWordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WordStatisticController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WordStatisticController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ExerciseStatisticModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ExerciseStatisticModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/WordModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/WordModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_06_125529_create_exercises_statistics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_06_125529_create_exercises_statistics_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_06_125719_create_words_statistics_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_06_125719_create_words_statistics_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,22 +143,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.WordTest">
-    <configuration name="WordTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\WordTest" file="$PROJECT_DIR$/tests/Unit/WordTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="WordTest.test_can_create_word" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\WordTest" file="$PROJECT_DIR$/tests/Unit/WordTest.php" method="test_can_create_word" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.WordTest" />
-        <item itemvalue="PHPUnit.WordTest.test_can_create_word" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -177,13 +156,7 @@
       <workItem from="1573043611615" duration="5968000" />
       <workItem from="1573110026380" duration="21516000" />
       <workItem from="1573296969247" duration="11115000" />
-      <workItem from="1573454791255" duration="25556000" />
-      <workItem from="1573540474236" duration="26249000" />
-      <workItem from="1573627607400" duration="26087000" />
-      <workItem from="1573713239841" duration="31995000" />
-      <workItem from="1573812717637" duration="14910000" />
-      <workItem from="1574059127123" duration="57000" />
-      <workItem from="1574059212877" duration="18823000" />
+      <workItem from="1573454791255" duration="23749000" />
     </task>
     <servers />
   </component>
